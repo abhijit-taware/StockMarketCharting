@@ -1,0 +1,26 @@
+
+
+<h2>Stock Exchange Details</h2> 
+
+<hr/>
+<div *ngIf="stockExchange">
+  <div>
+    <label><b>StockExchange Name: </b></label> {{stockExchange.name}}
+  </div>
+  <div>
+    <label><b>Address: </b></label> {{stockExchange.address}}
+  </div>
+  <div>
+    <label><b>Remarks: </b></label> {{stockExchange.remarks}}
+  </div>
+ 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to StockExchange List</button><br>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+

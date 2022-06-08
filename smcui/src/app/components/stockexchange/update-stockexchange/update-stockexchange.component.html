@@ -1,0 +1,27 @@
+
+<h3>Update Stock Exchange</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Stock Exchange Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="stockExchange.name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="name">Address</label>
+        <input type="text" class="form-control" id="address" required [(ngModel)]="stockExchange.address" name="address">
+      </div>
+
+    <div class="form-group">
+      <label for="name">Remarks</label>
+      <input type="text" class="form-control" id="remarks" required [(ngModel)]="stockExchange.remarks" name="remarks">
+    </div>
+
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<p align="center"> <a [routerLink]="['/stockexchange']" routerLinkActive="router-link-active" >Back to StockExchange List</a></p>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+

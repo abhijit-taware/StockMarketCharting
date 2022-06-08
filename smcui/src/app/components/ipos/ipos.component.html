@@ -1,0 +1,64 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>IPO List</h2>
+    </div>
+    <p align="center"> <a [routerLink]="['/ipos/add']" routerLinkActive="router-link-active" >Add IPO</a></p>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Stock Exchange</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>OpenDateTime</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ipo of ipos | async">
+            <td>{{ipo.companyName}}</td>
+            <td>{{ipo.stockExchange}}</td>
+            <td>{{ipo.price}}</td>
+            <td>{{ipo.shares}}</td>
+            <td>{{ipo.openDateTime}}</td>
+            <td>{{ipo.remarks}}</td>
+            <td><button (click)="deleteIpo(ipo.id!)" class="btn btn-danger">Delete</button>
+                <button (click)="updateIpo(ipo.id!)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="ipoDetails(ipo.id!)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

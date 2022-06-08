@@ -1,0 +1,91 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Sector List</h2>
+  </div>
+  <p align="center"> <a [routerLink]="['/sectors/add']" routerLinkActive="router-link-active" >Add Sector</a></p>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>SectorName</th>
+          <th>Brief</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sector of sectors | async">
+          <td>{{sector.sectorName}}</td>
+          <td>{{sector.brief}}</td>
+          <td><button (click)="deleteSector(sector.id!)" class="btn btn-danger">Delete</button>
+              <button (click)="updateSector(sector.id!)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="sectorDetails(sector.id!)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<p>sector works!</p>
+<hr>
+<a routerLink="/Sector/add" class="btn btn-primary">Add new Sector</a>
+<br>
+<br>
+
+<table *ngIf="sectors.length>0; else noSectors" class="table table-striped">
+  <thead class="thead-inverse thead-dark">
+    <tr>
+      <th>Sector Name</th>
+      <th>Brief</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sector of sectors">
+      <td>{{ sector.sectorName }}</td>
+      <td>{{ sector.brief }}</td>
+      <td>
+        <a routerLink="edit-company/{{ sector.id }}" class="btn btn-secondary btn-sm">
+          <i class="fa fa-pencil"></i> Edit
+        </a>
+      </td>
+      <td>
+        <button (click)="onDeleteClick(sector.id!)" class="btn btn-secondary btn-sm">
+          <i class="fa fa-trash">Delete</i> 
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noSectors>
+  <h5>There are no sectors in the system.</h5>
+</ng-template>-->

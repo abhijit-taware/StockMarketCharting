@@ -1,0 +1,40 @@
+
+
+<h2>Company Details</h2> 
+
+<hr/>
+<div *ngIf="company">
+  <div>
+    <label><b>Company Name: </b></label> {{company.companyName}}
+  </div>
+  <div>
+    <label><b>Company Code: </b></label> {{company.code}}
+  </div>
+  <div>
+    <label><b>Ceo: </b></label> {{company.ceo}}
+  </div>
+  <div>
+    <label><b>Board of Directors: </b></label> {{company.boardofDirectors}}
+  </div>  
+  <div>
+    <label><b>Sector: </b></label> {{company.sector}}
+  </div>
+  <div>
+    <label><b>Turnover: </b></label> {{company.turnover}}
+  </div>
+  <div>
+    <label><b>Company Brief: </b></label> {{company.companyBrief}}
+  </div>
+  <div>
+    <label><b>Stock Exchange: </b></label> {{company.stockExchange}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Company List</button><br>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+

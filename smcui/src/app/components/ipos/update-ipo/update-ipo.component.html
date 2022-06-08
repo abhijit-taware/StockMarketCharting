@@ -1,0 +1,40 @@
+
+
+<h3>Update Ipo</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Company Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="ipo.companyName" name="name">
+      </div>
+
+    <div class="form-group">
+      <label for="name">Stock Exchange</label>
+      <input type="text" class="form-control" id="stockExchange" required [(ngModel)]="ipo.stockExchange" name="stcokExchange">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Price</label>
+      <input type="number" class="form-control" id="price" required [(ngModel)]="ipo.price" name="price">
+    </div>
+    <div class="form-group">
+        <label for="name">Shares</label>
+        <input type="number" class="form-control" id="shares" required [(ngModel)]="ipo.shares" name="shares">
+      </div>
+      <div class="form-group">
+        <label for="name">OpenDateTime</label>
+        <input type="datetime-local" class="form-control" id="date" required [(ngModel)]="ipo.openDateTime" name="date">
+      </div>
+      <div class="form-group">
+        <label for="name">Remarks</label>
+        <input type="text" class="form-control" id="remarks" required [(ngModel)]="ipo.remarks" name="remarks">
+      </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<p align="center"> <a [routerLink]="['/ipos']" routerLinkActive="router-link-active" >Back to Ipo List</a></p>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+

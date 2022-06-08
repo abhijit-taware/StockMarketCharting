@@ -1,0 +1,53 @@
+
+
+
+<h3>Create IPO</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id">Ipo Id</label>
+        <input type="number" class="form-control" id="id" required [(ngModel)]="ipo.id" name="id">
+      </div>
+   
+<div class="form-group">
+    <label for="name">Company Name</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="ipo.companyName" name="name">
+  </div>
+
+<div class="form-group">
+  <label for="name">Stock Exchange</label>
+  <input type="text" class="form-control" id="stockExchange" required [(ngModel)]="ipo.stockExchange" name="stcokExchange">
+</div>
+
+<div class="form-group">
+  <label for="name">Price</label>
+  <input type="number" class="form-control" id="price" required [(ngModel)]="ipo.price" name="price">
+</div>
+<div class="form-group">
+    <label for="name">Shares</label>
+    <input type="number" class="form-control" id="shares" required [(ngModel)]="ipo.shares" name="shares">
+  </div>
+  <div class="form-group">
+    <label for="name">OpenDateTime</label>
+    <input type="datetime-local" class="form-control" id="date" required [(ngModel)]="ipo.openDateTime" name="date">
+  </div>
+  <div class="form-group">
+    <label for="name">Remarks</label>
+    <input type="text" class="form-control" id="remarks" required [(ngModel)]="ipo.remarks" name="remarks">
+  </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+<p align="center"> <a [routerLink]="['/ipos']" routerLinkActive="router-link-active" >Back to Ipo list</a></p>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+
+

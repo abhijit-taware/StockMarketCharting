@@ -1,0 +1,57 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>StockExchange List</h2>
+    </div>
+    <p align="center"> <a [routerLink]="['/stockexchange/add']" routerLinkActive="router-link-active" >Add StockExchange</a></p>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>StockExchange Name</th>
+            <th>Address</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockExchange of stockExchanges | async">
+            <td>{{stockExchange.name}}</td>
+            <td>{{stockExchange.address}}</td>
+            <td>{{stockExchange.remarks}}</td>
+            <td><button (click)="deleteStockExchange(stockExchange.id!)" class="btn btn-danger">Delete</button>
+               <button (click)="updateStockExchange(stockExchange.id!)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="stockExchangeDetails(stockExchange.id!)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

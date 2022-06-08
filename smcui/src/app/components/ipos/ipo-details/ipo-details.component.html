@@ -1,0 +1,34 @@
+
+<h2>IPO Details</h2> 
+
+<hr/>
+<div *ngIf="ipo">
+  <div>
+    <label><b>Company Name: </b></label> {{ipo.companyName}}
+  </div>
+  <div>
+    <label><b>Stock Exchange: </b></label> {{ipo.stockExchange}}
+  </div>
+  <div>
+    <label><b>Price: </b></label> {{ipo.price}}
+  </div>  
+  <div>
+    <label><b>Shares: </b></label> {{ipo.shares}}
+  </div>
+  <div>
+    <label><b>OpenDateTime: </b></label> {{ipo.openDateTime}}
+  </div>
+  <div>
+    <label><b>Remarks: </b></label> {{ipo.remarks}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Ipo List</button><br>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+
+

@@ -1,0 +1,20 @@
+
+<div>
+    <h2>Import Data</h2>
+   <a target="_self" href="assets/template.xlsx" download="template.xlsx"><span>Download Template</span></a>
+    <br><br><br>
+    <div class="alert alert-danger" role="alert" *ngIf='errorOccured'>
+      {{errorMessage}}
+    </div>
+    <!--<div class="alert alert-success" role="alert" *ngIf='isSuccess'>
+      {{sucessMessage | json}}
+    </div>-->
+    <form #importDataForm = "ngForm">
+      <div class="form-group">
+        <label for="excelFile">Excel File</label>
+        <input type="file" class="form-control" (change)="onFileChange($event)" name="excelFile">
+      </div>
+    </form>
+   
+  </div>
+ <p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>

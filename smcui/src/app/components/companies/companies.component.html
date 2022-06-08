@@ -1,0 +1,66 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Company List</h2>
+  </div>
+  <p align="center"> <a [routerLink]="['/companies/add']" routerLinkActive="router-link-active" >Add Company</a></p>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Company Code</th>
+          <th>CEO</th>
+          <th>Bord Of Directors</th>
+          <th>Sector</th>
+          <th>Turnover</th>
+          <th>Company Brief</th>
+          <th>Stock Exchange</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of companies | async">
+          <td>{{company.companyName}}</td>
+          <th>{{company.code}}</th>
+          <td>{{company.ceo}}</td>
+          <td>{{company.boardofDirectors}}</td>
+          <td>{{company.sector}}</td>
+          <td>{{company.turnover}}</td>
+          <td>{{company.companyBrief}}</td>
+          <td>{{company.stockExchange}}</td>
+          <td><button (click)="deleteCompany(company.id!)" class="btn btn-danger">Delete</button>
+              <button (click)="updateCompany(company.id!)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="companyDetails(company.id!)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

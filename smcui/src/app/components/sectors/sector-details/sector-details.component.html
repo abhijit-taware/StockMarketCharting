@@ -1,0 +1,20 @@
+
+<h2>Sector Details</h2> 
+
+<hr/>
+<div *ngIf="sector">
+  <div>
+    <label><b>Sector Name: </b></label> {{sector.sectorName}}
+  </div>
+  <div>
+    <label><b>Brief: </b></label> {{sector.brief}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Sector List</button><br>
+<p align="center"> <a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to Home</a></p>
+
+
+
